@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  
+  /* Updated LiquidSat Orange Color Palette */
+  --primary: #FF6B35;
+  --primary-foreground: #ffffff;
+  --accent: #10B981;
+  --accent-foreground: #ffffff;
+  --warning: #F59E0B;
+  --warning-foreground: #ffffff;
+  --error: #EF4444;
+  --error-foreground: #ffffff;
+  --neutral-dark: #1F2937;
+  --neutral-medium: #6B7280;
+  --background: #FFFFFF;
+  --card: #FFFFFF;
+  --card-foreground: #1F2937;
+  --border: #E5E7EB;
+  
+  /* Orange gradient for headers */
+  --orange-light: #FFF4F1;
+  --orange-medium: #FFE4DC;
+  
+  /* Legacy mappings for compatibility */
+  --foreground: var(--neutral-dark);
+  --popover: var(--card);
+  --popover-foreground: var(--card-foreground);
+  --secondary: #F8F9FA;
+  --secondary-foreground: var(--neutral-dark);
+  --muted: #F8F9FA;
+  --muted-foreground: var(--neutral-medium);
+  --destructive: var(--error);
+  --destructive-foreground: var(--error-foreground);
+  --input: transparent;
+  --input-background: #F8F9FA;
+  --ring: var(--primary);
+  --radius: 0.75rem;
+  
+  /* Typography Scale */
+  --text-heading: 24px;
+  --text-subheading: 18px;
+  --text-body: 14px;
+  --text-caption: 12px;
+  
+  /* Font Weights */
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
+
+@theme inline {
+  --font-family-sans: var(--font-family);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-error: var(--error);
+  --color-error-foreground: var(--error-foreground);
+  --color-neutral-dark: var(--neutral-dark);
+  --color-neutral-medium: var(--neutral-medium);
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-orange-light: var(--orange-light);
+  --color-orange-medium: var(--orange-medium);
+  --color-foreground: var(--foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  --radius: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family);
+    font-size: var(--text-body);
+    font-weight: var(--font-regular);
+    line-height: 1.5;
+  }
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-heading);
+    font-weight: var(--font-bold);
+    line-height: 1.3;
+    color: var(--neutral-dark);
+  }
+
+  h2 {
+    font-size: var(--text-subheading);
+    font-weight: var(--font-semibold);
+    line-height: 1.4;
+    color: var(--neutral-dark);
+  }
+
+  h3 {
+    font-size: var(--text-body);
+    font-weight: var(--font-semibold);
+    line-height: 1.4;
+    color: var(--neutral-dark);
+  }
+
+  p {
+    font-size: var(--text-body);
+    font-weight: var(--font-regular);
+    line-height: 1.5;
+    color: var(--neutral-dark);
+  }
+
+  .text-caption {
+    font-size: var(--text-caption);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .text-body {
+    font-size: var(--text-body);
+    font-weight: var(--font-regular);
+  }
+
+  .text-body-medium {
+    font-size: var(--text-body);
+    font-weight: var(--font-semibold);
+  }
+
+  label {
+    font-size: var(--text-body);
+    font-weight: var(--font-semibold);
+    color: var(--neutral-dark);
+  }
+
+  button {
+    font-size: var(--text-body);
+    font-weight: var(--font-semibold);
+  }
+
+  input, textarea, select {
+    font-size: var(--text-body);
+    font-weight: var(--font-regular);
+    font-family: var(--font-family);
+  }
+}
